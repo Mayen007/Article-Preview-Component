@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [GitHub Repository](https://github.com/Mayen007/article-preview-component)
-- **Live Site URL:** [Live Demo](https://your-live-site-url.com)
+- **Solution URL:** [GitHub Repository](https://github.com/Mayen007/Article-Preview-Component)
+- **Live Site URL:** [Live Demo](https://mayen007.github.io/Article-Preview-Component/)
 
 ---
 
