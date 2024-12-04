@@ -1,0 +1,205 @@
+/* Importing variables */
+@import "variables", "resets";
+
+@font-face {
+  font-family: "Manrope-Medium";
+  src: url(../assets/fonts/static/Manrope-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url(../assets/fonts/static/Manrope-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "Manrope-Medium", sans-serif;
+  background-color: $light-grayish-blue;
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  max-width: 750px;
+  width: 85%;
+
+  &__image {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: initial;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  &__content {
+    width: 60%;
+    height: 100%;
+    padding: 1rem 2rem;
+  }
+}
+.card__heading {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 1.3rem;
+  color: $very-dark-grayish-blue;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+.card__description {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 0.86rem;
+  color: $desaturated-dark-blue;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  &__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__name {
+    font-family: "Manrope-Medium", sans-serif;
+    font-size: 0.9rem;
+    color: $very-dark-grayish-blue;
+    margin-bottom: 3px;
+  }
+}
+.card__date {
+  font-family: "Manrope-Medium", sans-serif;
+  font-size: 0.88rem;
+  color: $grayish-blue;
+}
+.share__button {
+  background-color: $light-grayish-blue;
+  border: none;
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.share__info {
+  display: none;
+  position: absolute;
+  top: 52%; /* Adjust this value as needed */
+  left: 90%;
+  transform: translateX(-50%);
+  background-color: $very-dark-grayish-blue;
+  padding: 0.6rem;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px $very-dark-grayish-blue;
+  width: 200px;
+}
+
+.share__text {
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $grayish-blue;
+}
+.share__image {
+  width: 18px;
+  height: 18px;
+}
+.share__info.visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.share__options {
+  display: flex;
+  gap: 1rem;
+}
+.share-button__info {
+  display: none;
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .card__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .card__content {
+    width: 100%;
+    padding: 1rem;
+  }
+  .share__info {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transform: none;
+    border-radius: 0 0 10px 10px;
+    justify-content: center;
+    padding: 0.54rem 1.5rem;
+    clip-path: none;
+  }
+  .share__info.visible {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .card__heading {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .card__description {
+    font-size: 1rem;
+  }
+  .share-button__info {
+    display: block;
+  }
+}
+.attribution {
+  font-size: 11px;
+  margin-top: 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+
+  a {
+    color: $very-dark-grayish-blue;
+    text-decoration: none
+  }
+}
+@media screen and (min-width: 768px) {
+  .share__info::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 62%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 25px solid $very-dark-grayish-blue;
+  }
+}
