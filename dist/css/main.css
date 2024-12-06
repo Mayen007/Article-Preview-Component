@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   background-color: white;
-  max-width: 750px;
+  max-width: 730px;
   width: 85%;
 }
 .card__image {
@@ -48,7 +48,6 @@ body {
   height: 100%;
   padding: 1rem 2rem;
 }
-
 .card__heading {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 1.3rem;
@@ -56,7 +55,6 @@ body {
   margin-bottom: 0.8rem;
   line-height: 1.2;
 }
-
 .card__description {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 0.86rem;
@@ -64,7 +62,6 @@ body {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
-
 .card__info {
   display: flex;
   align-items: center;
@@ -72,7 +69,6 @@ body {
   gap: 0.5rem;
   margin-top: 1rem;
 }
-
 .card__author {
   display: flex;
   align-items: center;
@@ -91,7 +87,6 @@ body {
   color: hsl(217, 19%, 35%);
   margin-bottom: 3px;
 }
-
 .card__date {
   font-family: "Manrope-Medium", sans-serif;
   font-size: 0.88rem;
@@ -111,7 +106,7 @@ body {
 .share__info {
   display: none;
   position: absolute;
-  top: 52%; /* Adjust this value as needed */
+  top: 57%;
   left: 90%;
   transform: translateX(-50%);
   background-color: hsl(217, 19%, 35%);
@@ -166,6 +161,8 @@ body {
     padding: 1rem;
   }
   .share__info {
+    display: flex;
+    gap: 1rem;
     position: absolute;
     top: 90%;
     left: 0;
@@ -211,7 +208,7 @@ body {
   .share__info::after {
     content: "";
     position: absolute;
-    bottom: -25px;
+    bottom: -20px;
     left: 62%;
     transform: translateX(-50%);
     width: 0;
@@ -219,5 +216,8 @@ body {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 25px solid hsl(217, 19%, 35%);
+  }
+  .card {
+    height: 260px;
   }
 }/*# sourceMappingURL=main.css.map */
